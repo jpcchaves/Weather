@@ -10,7 +10,7 @@ body {
 }
 
 div.container {
-  background-color: #efefef;
+  background-color: #efefefcf;
   display: flex;
   flex-direction: column;
   align-items: center;
