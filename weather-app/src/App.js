@@ -1,6 +1,6 @@
-import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
-import './App.css'
+import React, { Fragment, useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
   // Location Hook
@@ -24,7 +24,7 @@ function App() {
       }
     );
     setWeather(res.data);
-    console.log(res.data)
+    console.log(res.data);
   };
 
   // useEffect
@@ -37,28 +37,27 @@ function App() {
 
   // checking if the user gave us permission to access this location
   if (location == false) {
-    return (
-      <Fragment>Habilite a localização no browser.</Fragment>
-  )} else if (weather == false) {
-    return (
-    <Fragment>Carregando o clima...</Fragment>
-    )
+    return <Fragment><div className="container">Habilite a localização no browser e atualize a página.</div></Fragment>;
+  } else if (weather == false) {
+    return <Fragment><div className="container">Carregando o clima...</div></Fragment>;
   } else {
     return (
-    <Fragment>
-      <div className="container">
-        <h3>Clima em {weather["name"]}: {weather["weather"][0]["description"]}</h3>
-        <hr />
-        <ul>
-          <li>Temperatura atual: {weather["main"]["temp"].toFixed(0)} ºC</li>
-          <li>Sensação térmica de {weather["main"]["feels_like"]} ºC</li>
-          <li>Temperatura máxima: {weather["main"]["temp_max"]} ºC</li>
-          <li>Temperatua mínima: {weather["main"]["temp_min"]} ºC</li>
-          <li>Humidade: {weather["main"]["humidity"]}%</li>
-        </ul>
-      </div>
-    </Fragment>
-    )
+      <Fragment>
+        <div className="container">
+          <h3>
+            Clima em {weather["name"]}: {weather["weather"][0]["description"]}
+          </h3>
+          <hr />
+          <ul>
+            <li>Temperatura atual: {weather["main"]["temp"].toFixed(0)} ºC</li>
+            <li>Sensação térmica de {weather["main"]["feels_like"]} ºC</li>
+            <li>Temperatura máxima: {weather["main"]["temp_max"]} ºC</li>
+            <li>Temperatua mínima: {weather["main"]["temp_min"]} ºC</li>
+            <li>Humidade: {weather["main"]["humidity"]}%</li>
+          </ul>
+        </div>
+      </Fragment>
+    );
   }
 }
 
