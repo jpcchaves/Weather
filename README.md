@@ -10,7 +10,7 @@ Como rodar a aplicação:
 
 ### FrontEnd
 
-1.  No seu terminal integrado, acesse a pasta frontend e rode o comando `npm i` para instalar as dependências do projeto
+1.  No seu terminal integrado, acesse a pasta weather-app e rode o comando `npm i` para instalar as dependências do projeto
 2.  Após instalar as dependências, digite o comando `npm start`
 3.  O servidor inicializará na porta `http://localhost:3000`
 4.  Após inicializar, é preciso que você conceda permissão para o browser acessar sua localização atual.
@@ -30,7 +30,7 @@ How to run the application:
 
 ### FrontEnd
 
-1. In your integrated terminal, access the frontend folder and run the `npm i` command to install the project's dependencies
+1. In your integrated terminal, access the weather-app folder and run the `npm i` command to install the project's dependencies
 2. After installing the dependencies, type the command `npm start`
 3. The server will boot to port `http://localhost:3000`
 4. After launching, you need to grant permission for the browser to access your current location.
